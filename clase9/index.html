@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p > strong{
+            color: red
+        }
+        div > img{
+            width: 300px;
+        }
+
+
+        h2 ~ p {
+            height: 30px;
+            background-color: aqua;
+        }
+
+        /* pseudoclases */
+
+        a:visited {
+            color: brown
+        }
+        a:active {
+            color: turquoise;
+        }
+        img:hover{
+            height: 310px;
+            border: 5px solid yellow;
+        }
+
+        /* input:checked{
+            margin: 10px;
+        } */
+
+        /* first child */
+        div.primerHijo{
+           text-align: center;
+        }
+        div.primerHijo p{
+            display: inline;
+        }
+        div.primerHijo p:first-child{
+            color: blueviolet;
+        }
+        
+        .divPrueba .prueba:checked ~ p {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <p>
+        selector de hijos <strong>Pade > Hijo </strong>
+    </p>
+
+    <p>
+        texto <strong>texto strong</strong> sigue el texto
+    </p>
+
+    <div>
+        <img src="./Goku.png" alt="">
+        <p>parrafo</p>
+        <p>parrafo</p>
+    </div>
+
+    <div>
+        <h1>Hermanos adyacentes</h1>
+        <p>
+            texto 1
+        </p>
+        <p>
+            texto 2
+        </p>
+        <p>
+            texto 3
+        </p>
+    </div>
+
+    <div>
+        <h2>Hermanos generales</h2>
+        <p>
+            hermano 1 de H2
+        </p>
+        <p>
+            hermano 2 de H2
+        </p>
+        <p>
+            hermano 3 de H2
+        </p>
+    </div>
+
+    <!-- pseudo clases -->
+
+    <ul>
+        <li>
+            <a href="http://www.google.com.ar">Google</a>
+        </li>
+        <li>
+            <a href="http://www.facebook.com">Facebook</a>
+        </li>
+    </ul>
+
+    <input type="checkbox">
+
+    <!-- first child -->
+    <div class="primerHijo">
+
+        <p>
+            p1
+        </p>
+        <p>
+            p2
+        </p><p>
+            p3
+        </p>
+    </div>
+
+    <div class="divPrueba">
+        <input class="prueba" type="checkbox">
+        <p>Hola</p>
+        <p>Hola2</p>
+        <p>Hola3</p>
+    </div>
+</body>
+</html>
